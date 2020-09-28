@@ -9,4 +9,8 @@ module ApplicationHelper
       return page_title + " | " + base_title
     end
   end
+
+  def title_shuffle(s)
+    s.split('').shuffle.join
+  end
 end
