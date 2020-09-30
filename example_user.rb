@@ -15,4 +15,8 @@ class User
     "#{@first_name} #{@last_name}"
   end
 
+  def alpha_name
+    "#{@last_name}, #{@first_name}"
+  end
+
 end
