@@ -54,4 +54,14 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     assert_not duplicate_user.valid?
   end
+
+  test "Password should be present" do
+    @user.password = " " * 6
+    assert_not @user.valid?
+  end
+
+  test "Password should have a minimum" do
+    @user.password = @user.password_confirmation = "a" * 5
+    assert_not @user.valid?
+  end
 end
