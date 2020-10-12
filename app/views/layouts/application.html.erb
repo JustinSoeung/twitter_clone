@@ -16,6 +16,8 @@
     <div class="container">
       <%= yield %>
       <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %> #will work only if 
+                                                      dev environment
     </div>
 
   </body>
